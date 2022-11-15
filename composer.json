@@ -1,0 +1,44 @@
+{
+    "name": "wearesho-team/nigeriabulksms-message-delivery",
+    "description": "NigeriaBulkSms Integration",
+    "type": "library",
+    "require": {
+        "wearesho-team/message-delivery": "^1.7",
+        "guzzlehttp/guzzle": "^6.5 | ^7.0",
+        "horat1us/environment-config": "^1.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Horat1us",
+            "email": "reclamme@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Wearesho\\Delivery\\NigeriaBulkSms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wearesho\\Delivery\\NigeriaBulkSms\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "scripts": {
+        "lint": "phpcs --standard=PSR2 ./src ./tests",
+        "phpcbf": "phpcbf --standard=PSR2 ./src ./tests",
+        "cover": "phpunit --coverage-clover=coverage.xml",
+        "test": "phpunit"
+    }
+}
